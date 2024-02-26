@@ -2,18 +2,18 @@
 
 This is a simple iOS To-Do application designed to help users keep track of their tasks on their iOS devices. The app provides a user-friendly interface for adding, editing, and managing tasks efficiently.
 
-## Installation
-
-1. Clone or download the repository.
-2. Open the project in Xcode.
-3. Build and run the project on a simulator or a physical iOS device.
-
 ## Screenshots
 <div>
    <img src="https://github.com/muratakalan/Learning-Projects/assets/67590146/5a3338d8-2461-458e-b8a7-97de29748312.gif" width=255>
    <img src="https://github.com/muratakalan/Learning-Projects/assets/67590146/a6244c3a-793b-4b6b-934c-921086f264bd.png" width=255>
    <img src="https://github.com/muratakalan/Learning-Projects/assets/67590146/bcf369f9-0d55-40d9-af0a-5445519426cf.png" width=255>
 </div>
+
+## Installation
+
+1. Clone or download the repository.
+2. Open the project in Xcode.
+3. Build and run the project on a simulator or a physical iOS device.
 
 ## Usage
 
@@ -28,4 +28,4 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## Contact
 
-If you have any questions, suggestions, or issues, please feel free to contact the project maintainer at [muratakalan00@gmail.com](mailto:muratakalan00@gmail.com).
+If you have any questions, suggestions, or issues, please feel free to contact the project maintainer at [muratakalan00@gmail.com](mailto:muratakalan00@gmail.com)
