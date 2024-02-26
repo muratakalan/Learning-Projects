@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.items = UserDefaults.standard.stringArray(forKey: "items") ?? []
         title = "To Do List"
         view.addSubview(table)
         table.dataSource = self
@@ -36,6 +37,9 @@ class ViewController: UIViewController, UITableViewDataSource {
             if let field = alert.textFields?.first {
                 if let text = field.text, !text.isEmpty {
                     DispatchQueue.main.async {
+                        var currenItems =  UserDefaults.standard.stringArray(forKey: "items") ?? []
+                        currenItems.append(text)
+                        UserDefaults.standard.setValue(currenItems, forKey: "items")
                         self?.items.append(text)
                         self?.table.reloadData()
                     }
