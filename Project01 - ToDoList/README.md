@@ -8,19 +8,19 @@ This is a simple iOS To-Do application designed to help users keep track of thei
 2. Open the project in Xcode.
 3. Build and run the project on a simulator or a physical iOS device.
 
-## Usage
-
-1. Launch the app on your iOS device.
-2. To add a new task, tap on the "+" button.
-3. Fill in the details such as description.
-4. Tap "Done" to add the task.
-
 ## Screenshots
 <div>
    <img src="https://github.com/muratakalan/Learning-Projects/assets/67590146/5a3338d8-2461-458e-b8a7-97de29748312.gif" width=255>
    <img src="https://github.com/muratakalan/Learning-Projects/assets/67590146/a6244c3a-793b-4b6b-934c-921086f264bd.png" width=255>
    <img src="https://github.com/muratakalan/Learning-Projects/assets/67590146/bcf369f9-0d55-40d9-af0a-5445519426cf.png" width=255>
 </div>
+
+## Usage
+
+1. Launch the app on your iOS device.
+2. To add a new task, tap on the "+" button.
+3. Fill in the details such as description.
+4. Tap "Done" to add the task.
 
 ## Licence
 
