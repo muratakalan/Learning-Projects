@@ -16,10 +16,12 @@ This is a simple iOS To-Do application designed to help users keep track of thei
 4. Tap "Done" to add the task.
 
 ## Screenshots
+![Simulator Screenshot - iPhone 15 Pro Max - 2024-02-27 at 01 09 58](https://github.com/muratakalan/Learning-Projects/assets/67590146/a6244c3a-793b-4b6b-934c-921086f264bd)
+![Simulator Screenshot - iPhone 15 Pro Max - 2024-02-27 at 01 10 49](https://github.com/muratakalan/Learning-Projects/assets/67590146/bcf369f9-0d55-40d9-af0a-5445519426cf)
+https://github.com/muratakalan/Learning-Projects/assets/67590146/46e2ccdc-3244-40f1-8380-f27efd51e1b8
 
-/Users/muratakalan/Desktop/Simulator Screenshot - iPhone 15 Pro Max - 2024-02-27 at 01.10.49.png
-/Users/muratakalan/Desktop/Simulator Screenshot - iPhone 15 Pro Max - 2024-02-27 at 01.09.58.png
-/Users/muratakalan/Desktop/Simulator Screen Recording - iPhone 15 Pro Max - 2024-02-27 at 01.08.09.mp4
+
+
 
 ## Licence
 
