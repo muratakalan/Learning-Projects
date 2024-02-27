@@ -4,7 +4,7 @@
 //
 //  Created by murat akalan on 27.02.2024.
 //
-
+/*
 
 import UIKit
 
@@ -167,3 +167,88 @@ class ViewController: UIViewController
         userDefaults.set(timerCounting, forKey: COUNTING_KEY)
     }
 }
+*/
+import UIKit
+
+class ViewController: UIViewController {
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var startStopButton: UIButton!
+    
+    private var timer: Timer?
+    private var isTimerRunning = false
+    private var startTime: Date?
+    private var elapsedTime: TimeInterval = 0
+    
+    private let userDefaults = UserDefaults.standard
+    private let startTimeKey = "StartTime"
+    private let elapsedTimeKey = "ElapsedTime"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadSavedData()
+        updateTimeLabel()
+    }
+    
+    private func loadSavedData() {
+        startTime = userDefaults.object(forKey: startTimeKey) as? Date
+        elapsedTime = userDefaults.double(forKey: elapsedTimeKey)
+        isTimerRunning = startTime != nil
+    }
+    
+    private func updateTimeLabel() {
+        let timeString = makeTimeString(from: Int(elapsedTime))
+        timeLabel.text = timeString
+    }
+    
+    private func makeTimeString(from seconds: Int) -> String {
+        let (hours, minutes, seconds) = secondsToHoursMinutesSeconds(seconds)
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+    
+    private func secondsToHoursMinutesSeconds(_ seconds: Int) -> (Int, Int, Int) {
+        let hours = seconds / 3600
+        let minutes = (seconds % 3600) / 60
+        let seconds = (seconds % 3600) % 60
+        return (hours, minutes, seconds)
+    }
+    
+    @IBAction func startStopAction(_ sender: Any) {
+        if isTimerRunning {
+            stopTimer()
+        } else {
+            startTimer()
+        }
+    }
+    
+    private func startTimer() {
+        startTime = Date()
+        userDefaults.set(startTime, forKey: startTimeKey)
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+            self?.elapsedTime += 0.1
+            self?.updateTimeLabel()
+        }
+        
+        startStopButton.setTitle("STOP", for: .normal)
+        isTimerRunning = true
+    }
+    
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+        
+        userDefaults.removeObject(forKey: startTimeKey)
+        userDefaults.set(elapsedTime, forKey: elapsedTimeKey)
+        
+        startStopButton.setTitle("START", for: .normal)
+        isTimerRunning = false
+    }
+    
+    @IBAction func resetAction(_ sender: Any) {
+        stopTimer()
+        startTime = nil
+        elapsedTime = 0
+        updateTimeLabel()
+    }
+}
+
